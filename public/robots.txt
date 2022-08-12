@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: http://descola.org/sitemap.xml
+Sitemap: https://descola.org/sitemap.xml

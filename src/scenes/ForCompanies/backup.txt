@@ -1,0 +1,136 @@
+import React from 'react';
+
+import Footer from '../../descola-frontend-components/Footer';
+import ScrollToTop from '../../descola-frontend-components/ScrollToTop';
+import ContactForm from '../../components/ContactForm';
+import { BASE_URL_CDN } from '../../constants';
+
+const empresas = `${BASE_URL_CDN}app/assets/images/empresas.png`;
+const faberCastell = `${BASE_URL_CDN}app/assets/images/faberCastell.png`;
+const abbott = `${BASE_URL_CDN}app/assets/images/abbott.png`;
+const bradesco = `${BASE_URL_CDN}app/assets/images/bradesco.png`;
+const par = `${BASE_URL_CDN}app/assets/images/par.png`;
+const metodologia = `${BASE_URL_CDN}app/assets/images/metodologia.png`;
+const metodologiaM = `${BASE_URL_CDN}app/assets/images/metodologia-m.png`;
+const aula = `${BASE_URL_CDN}app/assets/images/aula.png`;
+const ebook2 = `${BASE_URL_CDN}app/assets/images/ebook(2).png`;
+const grupo = `${BASE_URL_CDN}app/assets/images/materiais.png`;
+const dashboard = `${BASE_URL_CDN}app/assets/images/dashboard.png`;
+
+const ForCompanies = () => (
+  <>
+    <ScrollToTop />
+
+    <div className="main">
+      <article className="article article--for-companies">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-6">
+              <h1>
+                Power Skills para toda a sua <span className="primary">Corporação</span>
+              </h1>
+              <p className="border-l primary">
+                “Só há uma coisa pior que formar colaboradores e eles partirem. É não os formar e eles permanecerem.” - Henry
+                Ford.
+              </p>
+              <p>
+                Conteúdos que vão ajudar seus colaboradores a tomar melhores decisões, se relacionarem melhor, serem mais
+                produtivos, a criar novos produtos, se comunicar melhor ou serem mais analíticos.
+              </p>
+
+              <p>
+                Na Descola desenhamos cursos para que os colaboradores saiam sempre com uma nova habilidade fundamental para seu
+                desenvolvimento profissional.
+              </p>
+              <p>Temos uma metodologia própria para criação de grandes jornadas de aprendizagem.</p>
+              <p>
+                Formatamos o conteúdo usando teoria, prática, cases, referências e reflexão conceitual. Usamos linguagem leve e
+                informal, além de trabalharmos materiais de aprofundamento e ferramentas de aplicação.
+              </p>
+              <p>
+                <strong>Cursos tão engajadores que atingimos uma taxa de conclusão dos conteúdos acima de 80%.</strong>
+              </p>
+            </div>
+            <div className="col-md-6 text-right">
+              <img src={empresas} alt="Image caption" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="primary">Cursos para todos os tipos de clientes:</h2>
+              <div className="logo-partners">
+                <img src={faberCastell} alt="Faber-Castel" />
+                <img src={abbott} alt="Abbott, a promise for life" />
+                <img src={bradesco} alt="Bradesco" />
+                <img src={par} alt="Par, corretora de seguros" />
+              </div>
+              <p>
+                Atendemos clientes de todos os portes e com diferentes necessidades. Modelos flexíveis que vão desde o uso da
+                nossa plataforma até a inserção de conteúdos no LMS das empresas.
+              </p>
+            </div>
+            <div className="col-12">
+              <h2 className="primary">Cursos online: nossa metodologia</h2>
+              <p>
+                Por que nosso resultado é diferente? Por que atingimos taxas de conclusão acima de 80%, enquanto outras
+                iniciativas não passam de 10%? Propomos uma maneira diferente de aprender temas inovadores. E para isso temos uma
+                metodologia própria que passa por essas quatro etapas.
+              </p>
+              <img
+                src={metodologia}
+                alt="Fundamentação Teórica, Exercícios Práticos, Cases, Reflexão Conceitual"
+                className="d-none d-sm-block"
+              />
+              <img
+                src={metodologiaM}
+                alt="Fundamentação Teórica, Exercícios Práticos, Cases, Reflexão Conceitual"
+                className="d-block d-sm-none"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="primary">A experiência de um curso</h2>
+            </div>
+            <div className="col-sm-4 text-center">
+              <img src={aula} alt="#" className="mb-2" />
+              <h3>+ 2 horas em video</h3>
+              <p>Video aulas divididas em capítulos de aproximadamente 7 minutos.</p>
+            </div>
+            <div className="col-sm-4 text-center">
+              <img src={ebook2} alt="#" className="mb-2" />
+              <h3>+2 horas de leitura ebook</h3>
+              <p>Material complementar com ferramentas para o aluno ir além.</p>
+            </div>
+            <div className="col-sm-4 text-center">
+              <img src={grupo} alt="#" className="mb-2" />
+              <h3>Ferramentas e exercícios</h3>
+              <p>Aplicação prática dos principais conceitos abordados no curso.</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-5">
+              <h2 className="primary">Relatórios personalizados</h2>
+              <p>
+                No Dashboard Descola você poderá monitorar as atividades de todos os funcionários com relatórios por funcionário,
+                por curso. Veja alguns exemplos:
+              </p>
+            </div>
+            <div className="col-sm-7">
+              <img
+                src={dashboard}
+                alt="Dashboard descola, informações na tela: numero de Usuários; Total de inscriçoes; Cursos finalisados; taxa de conclusão."
+              />
+            </div>
+            <div className="col-12 mt-60 text-center">
+              <ContactForm isCompany />
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <Footer type='public' />
+  </>
+);
+
+export default ForCompanies;
