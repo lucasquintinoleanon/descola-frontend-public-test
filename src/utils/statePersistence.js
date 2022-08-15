@@ -1,11 +1,10 @@
 /* eslint-disable no-console */
 // Mock localStorage when it is not allowed
-import bifrostCors from 'bifrost-cors';
 import {CrossStorageHub} from 'cross-storage';
 let localStorage;
 
-const originPublic = new RegExp(`/${process.env.REACT_APP_PUBLIC}$/`,'g')
-const originPrivate = new RegExp(`/${process.env.REACT_APP_PRIVATE}$/`,'g')
+// const originPublic = new RegExp(`/${process.env.REACT_APP_PUBLIC}$/`,'g')
+// const originPrivate = new RegExp(`/${process.env.REACT_APP_PRIVATE}$/`,'g')
 
 CrossStorageHub.init([
   {origin: /localhost:3000$/, allow: ['get', 'set', 'del', 'getKeys', 'clear']},
