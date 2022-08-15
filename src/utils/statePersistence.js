@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 // Mock localStorage when it is not allowed
-import bifrostCors from 'bifrost-cors';
 import {CrossStorageHub} from 'cross-storage';
 let localStorage;
 
