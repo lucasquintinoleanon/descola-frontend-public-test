@@ -44,10 +44,8 @@
     "yiq": "^3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build-stag": "env-cmd -f .env.staging react-scripts build",
-    "build-prod": "GENERATE_SOURCEMAP=false react-scripts build",
+    "start": "netlify dev",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{js,jsx,css,scss}\""
