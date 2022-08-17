@@ -3,12 +3,13 @@
 import {CrossStorageHub} from 'cross-storage';
 let localStorage;
 
-// const originPublic = new RegExp(`/${process.env.REACT_APP_PUBLIC}$/`,'g')
-// const originPrivate = new RegExp(`/${process.env.REACT_APP_PRIVATE}$/`,'g')
+const originPublic = new RegExp(`${process.env.REACT_APP_PUBLIC}$`,'')
+const originPrivate = new RegExp(`${process.env.REACT_APP_PRIVATE}$`,'')
+
 
 CrossStorageHub.init([
-  {origin: /localhost:3000$/, allow: ['get', 'set', 'del', 'getKeys', 'clear']},
-  {origin: /localhost:3001$/, allow: ['get', 'set', 'del', 'getKeys', 'clear']}
+  {origin: originPublic, allow: ['get', 'set', 'del', 'getKeys', 'clear']},
+  {origin: originPrivate, allow: ['get', 'set', 'del', 'getKeys', 'clear']}
 ]);
 
 try {
